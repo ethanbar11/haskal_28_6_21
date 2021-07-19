@@ -5,6 +5,8 @@ def reverse_sentence(s):
     new_s = ''
     for i in range(len(words)):
         new_s += words[i]+' '
+    print(new_s)
+    print(words)
     return new_s
 
 
