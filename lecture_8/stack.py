@@ -20,7 +20,21 @@ class Stack:
             raise Exception("The stack is empty!")
         return self.lst[-1]
 
-stack=Stack()
+    def __add__(self, other):
+        new_lst = self.lst + other.lst
+        new_stack = Stack()
+        new_stack.lst = new_lst
+
+    def __eq__(self, other):
+        if len(self.lst) != len(other.lst):
+            return False
+        for i in range(len(self.lst)):
+            if self.lst[i] != other.lst[i]:
+                return False
+        return True
+
+
+stack = Stack()
 stack.push(1)
 stack.push(2)
 stack.push(3)
