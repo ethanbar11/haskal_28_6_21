@@ -1,6 +1,15 @@
+import random
+
+
+def add_random_1(name):
+    random_index = random.randint(0, len(name) - 1)
+    new_name = name[:random_index] + '1' + name[random_index:]
+    return new_name
+
+
 class Lion:
     def __init__(self, name):
-        self.name = name
+        self.name = add_random_1(name)
 
 
 class Zoo:
